@@ -1,5 +1,5 @@
 <template>
-  <article tabindex="0">
+  <article>
     <figure>
       <picture>
         <source
@@ -24,6 +24,7 @@
             v-if="project.url"
             :href="'https://' + project.url"
             target="_blank"
+            tabindex="0"
           >
             <span>{{ project.url }}</span>
             <img
@@ -82,7 +83,7 @@ article {
   overflow: hidden;
 
   &:hover,
-  &:focus {
+  &:focus-within {
     figure {
       .splash {
         transform: scale3d(1, 1, 1);
