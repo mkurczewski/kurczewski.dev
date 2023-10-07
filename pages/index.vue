@@ -18,9 +18,10 @@ export default Vue.extend({
   data() {
     const projects: ProjectProps[] = [
       {
-        name: "mobileradiation",
-        url: "mobileradiation.com",
-        stack: ["HTML 5", "SCSS", "JavaScript", "Vue"],
+        name: "duffle",
+        description: " - app for online shopping at airports",
+        url: "duffleapp.com",
+        stack: ["React Native", "Typescript", "TanStack Query"],
       },
       {
         name: "wegeguru",
@@ -82,8 +83,7 @@ export default Vue.extend({
       },
       {
         name: "mudita-center",
-        description:
-          "Mudita Center - Electron app for managing Mudita Pure phone",
+        description: "Mudita Center - App for managing Mudita Pure phone",
         stack: ["React", "Styled Components", "Electron", "Node", "Serialport"],
       },
     ]
@@ -100,12 +100,12 @@ main {
   grid-template-columns: 1fr;
   grid-auto-rows: auto;
   grid-template-areas:
-    "mudita"
+    "duffle"
     "mudita-center"
     "golden-estate"
     "jafrasalonkosmetyczny"
     "sokbar"
-    "mobileradiation"
+    "mudita"
     "wegeguru"
     "lighthouse-canton"
     "kurczewski"
@@ -114,26 +114,26 @@ main {
   @media all and (min-width: 700px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-      "mudita golden-estate"
+      "duffle golden-estate"
       "sokbar mudita-center"
       "jafrasalonkosmetyczny wegeguru"
-      "kurczewski mobileradiation"
+      "kurczewski mudita"
       "znajdzzarzadce lighthouse-canton";
   }
 
   @media all and (min-width: 1400px) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-      "mudita golden-estate jafrasalonkosmetyczny"
+      "duffle golden-estate jafrasalonkosmetyczny"
       "sokbar mudita-center wegeguru"
-      "kurczewski lighthouse-canton mobileradiation";
+      "kurczewski lighthouse-canton mudita";
   }
 
   @media all and (min-width: 2600px) {
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas:
-      "mudita golden-estate jafrasalonkosmetyczny sokbar lighthouse-canton"
-      "mudita-center znajdzzarzadce wegeguru mobileradiation kurczewski";
+      "duffle golden-estate jafrasalonkosmetyczny sokbar lighthouse-canton"
+      "mudita-center znajdzzarzadce wegeguru mudita kurczewski";
   }
 }
 </style>
